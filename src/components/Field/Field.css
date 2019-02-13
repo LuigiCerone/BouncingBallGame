@@ -1,0 +1,8 @@
+.default {
+    display: none;
+}
+
+.started{
+    display: block;
+    background: lightblue;
+}

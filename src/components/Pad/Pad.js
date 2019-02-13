@@ -9,8 +9,8 @@ class Pad extends Component {
         return (
             <Rect>
                 <Rect
-                    width={constants.PAD_WIDTH} height={constants.PAD_HEIGHT} x={50} y={50}
-                    fill="yellow"
+                    width={constants.PAD_WIDTH} height={constants.PAD_HEIGHT} x={this.props.x} y={this.props.y}
+                    fill="black"
                     onClick={this.handleStart}
                 />
             </Rect>

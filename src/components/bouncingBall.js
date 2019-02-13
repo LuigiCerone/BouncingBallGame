@@ -40,13 +40,13 @@ var bouncingBall = (function snake() {
         y: HEIGHT/2
     };
 
-    var drawMiddleLine = function () {
+    /* var drawMiddleLine = function () {
         ctx.beginPath();
         ctx.moveTo(400, 0);
         ctx.lineTo(400, 400);
         ctx.fillStyle = 'black';
         ctx.stroke();
-    };
+    }; */
 
     var drawPad = function (x, y) {
         ctx.fillStyle = 'black';
@@ -54,7 +54,7 @@ var bouncingBall = (function snake() {
         ctx.stroke();
     };
 
-    var handleKeyDown = function (key) {
+   /*  var handleKeyDown = function (key) {
         // console.log(key);
         switch (key) {
             case 38:
@@ -64,8 +64,8 @@ var bouncingBall = (function snake() {
                     downPressed = true;
                 break;
         }
-    };
-
+    }; */
+/* 
     var handleKeyUp = function (key) {
         // console.log(key);
         switch (key) {
@@ -76,7 +76,7 @@ var bouncingBall = (function snake() {
                 downPressed = false;
                 break;
         }
-    };
+    }; */
 
     var gameDraw = function () {
         if (upPressed && (leftPad.y <= (HEIGHT - PAD_SPEED)) && (rightPad.y >= PAD_SPEED)) {

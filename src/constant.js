@@ -1,7 +1,5 @@
-import { constants } from "http2";
-
 const constants = {
-    
+
     /** Constants related to both pads. */
     PAD_HEIGHT: 40,
     PAD_WIDTH: 10,
@@ -20,4 +18,4 @@ const constants = {
     BALL_SPEED_Y: -8
 }
 
-export default constants;
+export { constants };

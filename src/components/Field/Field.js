@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Konva from 'konva';
 import { Layer, Rect, Stage, Group, Text } from 'react-konva';
 import './Field.css';
-import * as constants from '../../constant';
+import { size_constants, ball_constants, field_constants } from '../../constants';
 import Pad from '../Pad/Pad';
+
 
 class Field extends Component {
     constructor(props) {
@@ -12,16 +13,17 @@ class Field extends Component {
             isStarted: false,
             score: 0,
             leftPad: {
-                x: constants.LEFT_PAD_X,
-                y: constants.LEFT_PAD_Y
+                z: 4,
+                x: size_constants.LEFT_PAD_X,
+                y: size_constants.LEFT_PAD_Y
             },
             rightPad: {
-                x: constants.RIGHT_PAD_X,
-                y: constants.RIGHT_PAD_Y
+                x: size_constants.RIGHT_PAD_X,
+                y: size_constants.RIGHT_PAD_Y
             },
             ball: {
-                x: props.width / 2,
-                y: props.height / 2
+                x: field_constants.WIDTH / 2,
+                y: field_constants.HEIGHT / 2
             }
         }
 
@@ -79,16 +81,14 @@ class Field extends Component {
                             <Rect
                                 width={this.props.width} height={this.props.height} x={0} y={0}
                                 fill="yellow"
-                                onClick={this.handleStart}
-                            />
-                            <Group>
-                                <Pad x={this.state.leftPad.x} y={this.state.leftPad.y}></Pad>
-                                <Pad x={this.state.rightPad.x} y={this.state.rightPad.y}></Pad>
-                            </Group>
+                                onClick={this.handleStart} />
+
+                            <Pad x={this.state.leftPad.x} y={this.state.leftPad.y}></Pad>
+                            <Pad x={this.state.rightPad.x} y={this.state.rightPad.y}></Pad>
                         </Group>
                     </Layer>
                 </Stage>
-            </div>
+            </div >
         );
     }
 }
@@ -100,3 +100,4 @@ export default Field;
                Press start to play the game!
                <button onClick={this.handleStart}>START</button>
            </div> */
+
